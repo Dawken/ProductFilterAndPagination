@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
-import Pagination from '@src/features/products/productsLayout/components/pagination/pagination'
-import ProductsNavbar from '@src/features/products/productsLayout/components/productsNavbar/productsNavbar'
+import Pagination from '@src/features/products/components/productsLayout/pagination/pagination'
+import ProductsNavbar from '@src/features/products/components/productsLayout/productsNavbar/productsNavbar'
 
 const ProductsLayout = ({ children }: { children: ReactNode }) => {
   return (

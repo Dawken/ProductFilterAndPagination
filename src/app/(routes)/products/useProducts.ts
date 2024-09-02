@@ -1,9 +1,11 @@
-import productsData from '@src/features/products/productsData'
+import {
+  productsData,
+  productsPerPage,
+} from '@src/features/products/productsData'
 import { Props } from './products.types'
 import filterItems from '@src/utils/filterItems'
 
 const useProducts = ({ searchParams }: Props) => {
-  const productsPerPage = 5
   const page = searchParams['page'] ?? '1'
   const searchTerm = searchParams['search'] ?? ''
 

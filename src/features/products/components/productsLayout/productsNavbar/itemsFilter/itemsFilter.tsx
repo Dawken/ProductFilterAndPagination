@@ -7,7 +7,7 @@ const ItemsFilter = () => {
   const { searchTerm, setSearchTerm } = useItemsFilter()
 
   return (
-    <div className='flex items-center w-[380px] h-[45px] outline outline-[1px] outline-lightGrey rounded-md text-black'>
+    <div className='flex items-center w-[380px] h-[45px] outline outline-[1px] outline-lightGrey rounded-lg text-black'>
       <input
         className='size-full outline-none pl-2'
         placeholder='Search'

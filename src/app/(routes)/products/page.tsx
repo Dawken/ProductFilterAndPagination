@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import { Props } from './products.types'
 import useProducts from './useProducts'

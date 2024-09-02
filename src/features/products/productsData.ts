@@ -1,3 +1,5 @@
+const productsPerPage = 8
+
 const productsData = [
   {
     name: 'Computer',
@@ -497,4 +499,4 @@ const productsData = [
     id: '50',
   },
 ]
-export default productsData
+export { productsData, productsPerPage }
