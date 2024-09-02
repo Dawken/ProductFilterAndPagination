@@ -7,6 +7,11 @@ const config: Config = {
       fontFamily: {
         manrope: ['Manrope'],
       },
+      colors: {
+        lightGrey: {
+          DEFAULT: '#e3e3e3',
+        },
+      },
     },
   },
   plugins: [],

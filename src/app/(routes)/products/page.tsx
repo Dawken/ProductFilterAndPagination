@@ -1,25 +1,17 @@
-import productsData from '@src/features/products/productsData'
+'use client'
 import React from 'react'
+import { Props } from './products.types'
+import useProducts from './useProducts'
 
-const Products = ({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined }
-}) => {
-  const productsPerPage = 5
-  const page = searchParams ? searchParams['page'] : '1'
-
-  const start = (Number(page) - 1) * productsPerPage
-  const end = start + productsPerPage
-
-  const entries = productsData.slice(start, end)
+const Products = ({ searchParams }: Props) => {
+  const { entries } = useProducts({ searchParams })
 
   return (
-    <div>
+    <section className='flex-1 bg-lightGrey/30'>
       {entries.map((entry) => {
         return <div key={entry.id}>{entry.name}</div>
       })}
-    </div>
+    </section>
   )
 }
 

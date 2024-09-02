@@ -1,0 +1,14 @@
+import React from 'react'
+import ItemsFilter from './itemsFilter/itemsFilter'
+
+const ProductsNavbar = () => {
+  return (
+    <header className='flex justify-evenly items-center gap-12 py-5'>
+      <h1 className='text-4xl p-3'>Logo</h1>
+      <ItemsFilter />
+      <button>Login</button>
+    </header>
+  )
+}
+
+export default ProductsNavbar
