@@ -8,16 +8,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        black: '#090909',
-        delete: '#ff4f4d',
-      },
       fontFamily: {
-        raleway: ['Raleway'],
-      },
-      textColor: {
-        disabled: 'rgba(255,255,255,0.3)',
-        delete: '#ff4f4d',
+        manrope: ['Manrope'],
       },
     },
   },
