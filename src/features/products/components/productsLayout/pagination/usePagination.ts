@@ -1,11 +1,11 @@
 import { useRouter, useSearchParams } from 'next/navigation'
-import filterItems from '@src/utils/filterItems'
 import { useEffect, useState } from 'react'
 import handleSearchParams from '@src/utils/handleSearchParams'
 import {
   productsData,
   productsPerPage,
 } from '@src/features/products/productsData'
+import filterProducts from '@src/utils/filterProducts'
 
 const usePagination = () => {
   const router = useRouter()
@@ -14,7 +14,7 @@ const usePagination = () => {
   const [previousPage, setPreviousPage] = useState(1)
   const searchTerm = searchParams.get('search') ?? ''
 
-  const filteredProducts = filterItems({
+  const filteredProducts = filterProducts({
     items: productsData,
     filterTerm: searchTerm,
   })

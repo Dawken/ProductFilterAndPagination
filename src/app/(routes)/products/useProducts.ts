@@ -3,7 +3,7 @@ import {
   productsPerPage,
 } from '@src/features/products/productsData'
 import { Props } from './products.types'
-import filterItems from '@src/utils/filterItems'
+import filterProducts from '@src/utils/filterProducts'
 
 const useProducts = ({ searchParams }: Props) => {
   const page = searchParams['page'] ?? '1'
@@ -12,7 +12,7 @@ const useProducts = ({ searchParams }: Props) => {
   const start = (Number(page) - 1) * productsPerPage
   const end = start + productsPerPage
 
-  const filteredProducts = filterItems({
+  const filteredProducts = filterProducts({
     items: productsData,
     filterTerm: searchTerm,
   }).sort((a, b) => {
@@ -21,9 +21,9 @@ const useProducts = ({ searchParams }: Props) => {
     return 0
   })
 
-  const entries = filteredProducts.slice(start, end)
+  const products = filteredProducts.slice(start, end)
   return {
-    entries,
+    products,
   }
 }
 

@@ -1,15 +1,18 @@
 import React from 'react'
 import { Props } from './products.types'
 import useProducts from './useProducts'
+import ProductCard from '@src/features/products/components/productCard/productCard'
 
 const Products = ({ searchParams }: Props) => {
-  const { entries } = useProducts({ searchParams })
+  const { products } = useProducts({ searchParams })
 
   return (
-    <section className='flex-1 bg-lightGrey/30'>
-      {entries.map((entry) => {
-        return <div key={entry.id}>{entry.name}</div>
-      })}
+    <section className='flex justify-center flex-1 bg-lightGrey/30 overflow-y-auto'>
+      <div className='w-full max-w-[1250px] h-fit min-h-full grid grid-cols-[repeat(auto-fill,_minmax(288px,_1fr))] justify-center justify-items-center align-items-center py-4'>
+        {products.map((product) => {
+          return <ProductCard key={product.id} product={product} />
+        })}
+      </div>
     </section>
   )
 }
