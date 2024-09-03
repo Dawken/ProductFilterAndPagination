@@ -4,17 +4,27 @@ import { useRouter } from 'next/navigation'
 import handleSearchParams from '@src/utils/handleSearchParams'
 
 const useItemsFilter = () => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [isPromoCheckBoxChecked, setIsPromoCheckBoxChecked] = useState(false)
-  const [isActiveCheckBoxChecked, setIsActiveCheckBoxChecked] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
+  const [searchTerm, setSearchTerm] = useState('')
+  const isActive = Boolean(searchParams.get('active'))
+  const isPromotion = Boolean(searchParams.get('promotion'))
 
-  const page = Number(searchParams.get('page') ?? '1')
+  const [isActiveCheckBoxChecked, setIsActiveCheckBoxChecked] =
+    useState(isActive)
+  const [isPromoCheckBoxChecked, setIsPromoCheckBoxChecked] =
+    useState(isPromotion)
 
   useEffect(() => {
-    router.push(handleSearchParams({ page, searchTerm }))
-  }, [searchTerm])
+    router.push(
+      handleSearchParams(searchParams, {
+        page: 1,
+        search: searchTerm,
+        active: isActiveCheckBoxChecked,
+        promotion: isPromoCheckBoxChecked,
+      })
+    )
+  }, [searchTerm, isActiveCheckBoxChecked, isPromoCheckBoxChecked])
 
   return {
     searchTerm,
