@@ -1,12 +1,19 @@
 import RatingStars from '@src/components/ui/ratingStars/ratingStars'
 import { ProductProps } from '@src/types/productProps'
 import Image from 'next/image'
+import DiscountIcon from 'public/icons/discountIcon'
 import React from 'react'
 
 const ProductCard = ({ product }: { product: ProductProps }) => {
-  const { name, image, description, rating } = product
+  const { name, image, description, rating, promotion } = product
   return (
-    <div className='flex flex-col max-w-[288px] max-h-[400px] m-2 bg-white rounded-lg overflow-hidden shadow-md '>
+    <div className='flex flex-col max-w-[288px] max-h-[400px] m-2 bg-white rounded-lg overflow-hidden shadow-md relative'>
+      {promotion && (
+        <span className='flex items-center gap-1 text-black absolute top-6 px-2.5 py-1 bg-lightGreen rounded-r-full font-bold text-sm'>
+          Promo
+          <DiscountIcon height={18} width={18} />
+        </span>
+      )}
       <Image
         src={image}
         alt='Product image'

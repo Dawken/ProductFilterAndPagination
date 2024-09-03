@@ -11,6 +11,9 @@ const config: Config = {
         lightGrey: {
           DEFAULT: '#e3e3e3',
         },
+        lightGreen: {
+          DEFAULT: '#0dffc5',
+        },
       },
     },
   },
