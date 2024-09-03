@@ -7,7 +7,7 @@ const Products = ({ searchParams }: Props) => {
   const { products } = useProducts({ searchParams })
 
   return (
-    <section className='flex justify-center flex-1 bg-lightGrey/30 overflow-y-auto'>
+    <section className='flex justify-center flex-1 overflow-y-auto'>
       <div className='w-full max-w-[1250px] h-fit min-h-full grid grid-cols-[repeat(auto-fill,_minmax(288px,_1fr))] justify-center justify-items-center align-items-center py-4'>
         {products.map((product) => {
           return <ProductCard key={product.id} product={product} />
