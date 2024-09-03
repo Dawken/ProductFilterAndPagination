@@ -7,7 +7,7 @@ import React from 'react'
 const ProductCard = ({ product }: { product: ProductProps }) => {
   const { name, image, description, rating, promotion, active } = product
   return (
-    <div className='flex flex-col max-w-[288px] max-h-[400px] m-2 bg-white rounded-lg overflow-hidden shadow-md relative'>
+    <div className='flex flex-col size-full max-w-[288px] max-h-[400px] m-2 bg-white rounded-lg overflow-hidden shadow-md relative'>
       {promotion && (
         <span
           className={`flex items-center gap-1 ${

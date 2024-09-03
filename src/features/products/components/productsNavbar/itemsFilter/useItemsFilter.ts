@@ -5,7 +5,8 @@ import handleSearchParams from '@src/utils/handleSearchParams'
 
 const useItemsFilter = () => {
   const [searchTerm, setSearchTerm] = useState('')
-
+  const [isPromoCheckBoxChecked, setIsPromoCheckBoxChecked] = useState(false)
+  const [isActiveCheckBoxChecked, setIsActiveCheckBoxChecked] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -18,6 +19,10 @@ const useItemsFilter = () => {
   return {
     searchTerm,
     setSearchTerm,
+    isPromoCheckBoxChecked,
+    setIsPromoCheckBoxChecked,
+    isActiveCheckBoxChecked,
+    setIsActiveCheckBoxChecked,
   }
 }
 
