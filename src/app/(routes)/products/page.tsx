@@ -8,7 +8,7 @@ const Products = ({ searchParams }: Props) => {
 
   return (
     <section className='flex justify-center flex-1 overflow-y-auto'>
-      <div className='w-full max-w-[1250px] h-fit min-h-full grid grid-cols-[repeat(auto-fill,_minmax(288px,288px))] justify-center justify-items-center align-items-center'>
+      <div className='w-full max-w-[1250px] h-fit min-h-full grid grid-cols-[repeat(auto-fill,_minmax(288px,1fr))] justify-center justify-items-center align-items-center'>
         {products.map((product) => {
           return <ProductCard key={product.id} product={product} />
         })}

@@ -17,9 +17,8 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
       <div className='flex flex-col justify-between flex-1 p-4 font-semibold text-sm '>
         <div>
           <h2 className='text-lg text-[#1A1B1D]'>{name}</h2>
-          <span className='text-[#9194A5]'>{description}</span>
+          <span className='text-[#9194A5] line-clamp-3'>{description}</span>
         </div>
-
         <div className='flex flex-col gap-5'>
           <RatingStars rating={rating} />
           <button className='bg-[#4460F7] rounded py-[7px] text-white'>
