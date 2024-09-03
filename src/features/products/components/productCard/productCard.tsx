@@ -5,11 +5,15 @@ import DiscountIcon from 'public/icons/discountIcon'
 import React from 'react'
 
 const ProductCard = ({ product }: { product: ProductProps }) => {
-  const { name, image, description, rating, promotion } = product
+  const { name, image, description, rating, promotion, active } = product
   return (
     <div className='flex flex-col max-w-[288px] max-h-[400px] m-2 bg-white rounded-lg overflow-hidden shadow-md relative'>
       {promotion && (
-        <span className='flex items-center gap-1 text-black absolute top-6 px-2.5 py-1 bg-lightGreen rounded-r-full font-bold text-sm'>
+        <span
+          className={`flex items-center gap-1 ${
+            active ? 'bg-black text-lightGreen' : 'bg-white/30 text-black/50'
+          } absolute top-6 px-2.5 py-1 rounded-r-full font-semibold text-sm z-10`}
+        >
           Promo
           <DiscountIcon height={18} width={18} />
         </span>
@@ -19,7 +23,7 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
         alt='Product image'
         width={288}
         height={170}
-        className='aspect-[288/170]'
+        className={`aspect-[288/170] ${active ? 'grayscale-0' : 'grayscale'}`}
       />
       <div className='flex flex-col justify-between flex-1 p-4 font-semibold text-sm '>
         <div>
@@ -28,8 +32,12 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
         </div>
         <div className='flex flex-col gap-5'>
           <RatingStars rating={rating} />
-          <button className='bg-[#4460F7] rounded py-[7px] text-white'>
-            Show details
+          <button
+            className={` rounded py-[9px] text-white ${
+              active ? 'bg-[#4460F7]' : 'bg-[#9194A5]'
+            }`}
+          >
+            {active ? 'Show details' : 'Unavailable'}
           </button>
         </div>
       </div>
