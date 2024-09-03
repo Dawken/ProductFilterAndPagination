@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        manrope: ['Manrope'],
+        nunito: ['Nunito'],
       },
       colors: {
         lightGrey: {
