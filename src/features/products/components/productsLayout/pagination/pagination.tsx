@@ -7,7 +7,7 @@ import handleSearchParams from '@src/utils/handleSearchParams'
 const Pagination = () => {
   const { page, totalPages, searchTerm } = usePagination()
   return (
-    <div>
+    <div className='flex justify-center'>
       {page > 1 && (
         <Link href={handleSearchParams({ page: page - 1, searchTerm })}>
           <button>Previous</button>

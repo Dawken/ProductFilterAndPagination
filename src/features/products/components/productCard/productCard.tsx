@@ -1,11 +1,12 @@
+import RatingStars from '@src/components/ui/ratingStars/ratingStars'
 import { ProductProps } from '@src/types/productProps'
 import Image from 'next/image'
 import React from 'react'
 
 const ProductCard = ({ product }: { product: ProductProps }) => {
-  const { name, image, description } = product
+  const { name, image, description, rating } = product
   return (
-    <div className='flex flex-col max-w-[288px] max-h-[400px] m-2 bg-white rounded-xl overflow-hidden'>
+    <div className='flex flex-col max-w-[288px] max-h-[400px] m-2 bg-white rounded-lg overflow-hidden shadow-md '>
       <Image
         src={image}
         alt='Product image'
@@ -19,7 +20,12 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
           <span className='text-[#9194A5]'>{description}</span>
         </div>
 
-        <button className='bg-[#4460F7] rounded py-[7px]'>Show details</button>
+        <div className='flex flex-col gap-5'>
+          <RatingStars rating={rating} />
+          <button className='bg-[#4460F7] rounded py-[7px] text-white'>
+            Show details
+          </button>
+        </div>
       </div>
     </div>
   )
