@@ -9,7 +9,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: Props) => {
     currentPage,
   })
   return (
-    <div className='flex items-center gap-6 font-semibold text-sm pb-3'>
+    <div className='flex items-center gap-6 font-semibold text-sm'>
       <NavigationButton
         onPageChange={onPageChange}
         navigateToPage={1}

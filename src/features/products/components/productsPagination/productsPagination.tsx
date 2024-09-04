@@ -7,7 +7,7 @@ const ProductsPagination = () => {
   const { totalPages, handlePageClick, page } = useProductsPagination()
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center py-3'>
       <Pagination
         currentPage={page}
         totalPages={totalPages}
