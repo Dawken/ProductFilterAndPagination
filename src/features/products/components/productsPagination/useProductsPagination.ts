@@ -7,7 +7,7 @@ import {
 import filterProducts from '@src/utils/filterProducts'
 import handleSearchParams from '@src/utils/handleSearchParams'
 
-const usePagination = () => {
+const useProductsPagination = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [page, setPage] = useState(1)
@@ -39,11 +39,15 @@ const usePagination = () => {
     setPage(pageParam)
   }, [searchParams])
 
+  const handlePageClick = (page: number) => {
+    router.push(handleSearchParams(searchParams, { page }))
+  }
+
   return {
-    page,
     totalPages,
-    searchParams,
+    handlePageClick,
+    page,
   }
 }
 
-export default usePagination
+export default useProductsPagination
