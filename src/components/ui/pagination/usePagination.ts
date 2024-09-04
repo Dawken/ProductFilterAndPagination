@@ -39,7 +39,6 @@ const usePagination = ({ totalPages, currentPage }: HookProps) => {
       return [firstPageIndex, '...', ...middleRange, '...', lastPageIndex]
     }
 
-    // Dodajemy przypadek domyślny, aby upewnić się, że zawsze zwracamy tablicę
     return range(1, totalPages)
   }, [totalPages, currentPage])
 
