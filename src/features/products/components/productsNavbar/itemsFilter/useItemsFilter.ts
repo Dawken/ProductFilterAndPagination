@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 import handleSearchParams from '@src/utils/handleSearchParams'
@@ -7,6 +7,8 @@ const useItemsFilter = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [isInitialLoad, setIsInitialLoad] = useState(true)
+  const [isInputFocused, setIsInputFocused] = useState(false)
+  const inputRef = useRef(null)
 
   const searchParam = searchParams.get('search') ?? ''
   const isActive = Boolean(searchParams.get('active'))
@@ -33,6 +35,10 @@ const useItemsFilter = () => {
     )
   }, [searchTerm, isActiveCheckBoxChecked, isPromoCheckBoxChecked])
 
+  const checkIsInputFocused = () => {
+    setIsInputFocused(inputRef.current === document.activeElement)
+  }
+
   return {
     searchTerm,
     setSearchTerm,
@@ -40,6 +46,9 @@ const useItemsFilter = () => {
     setIsPromoCheckBoxChecked,
     isActiveCheckBoxChecked,
     setIsActiveCheckBoxChecked,
+    isInputFocused,
+    checkIsInputFocused,
+    inputRef,
   }
 }
 

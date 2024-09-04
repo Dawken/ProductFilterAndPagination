@@ -19,7 +19,7 @@ const Products = ({ searchParams }: Props) => {
             })}
           </div>
         ) : (
-          <div className='text-4xl text-black'>No results :(</div>
+          <div className='text-4xl text-black self-center'>No results :(</div>
         )}
       </section>
       <ProductsPagination />
