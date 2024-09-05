@@ -26,15 +26,17 @@ const ItemsFilter = () => {
           <CheckBox
             isCheckBoxChecked={isActiveCheckBoxChecked}
             setIsCheckBoxChecked={setIsActiveCheckBoxChecked}
+            id={'active'}
           />
-          Active
+          <label htmlFor='active'>Active</label>
         </div>
         <div className='flex items-center gap-2'>
           <CheckBox
             isCheckBoxChecked={isPromoCheckBoxChecked}
             setIsCheckBoxChecked={setIsPromoCheckBoxChecked}
+            id={'promo'}
           />
-          Promo
+          <label htmlFor='promo'>Promo</label>
         </div>
       </div>
       <div className='w-full md:max-w-[392px] max-md:flex-1 h-[48px] min-w-[288px] text-black relative'>
@@ -48,9 +50,9 @@ const ItemsFilter = () => {
             onClick={checkIsInputFocused}
             onBlur={checkIsInputFocused}
           />
-          <button className='pr-4'>
+          <div className='flex items-center aspect-square'>
             <SearchIcon width={26} height={26} />
-          </button>
+          </div>
           <ShiningBorder borderRadius={4} autoPlay={isInputFocused} />
         </div>
       </div>
