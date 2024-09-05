@@ -7,16 +7,17 @@ const NavigationButton = ({
   currentPage,
   totalPages,
 }: Props) => {
+  if (totalPages < 1) {
+    return null
+  }
   return (
-    totalPages > 0 && (
-      <button
-        className={'disabled:text-[#9194A5] disabled:cursor-not-allowed'}
-        onClick={() => onPageChange(navigateToPage)}
-        disabled={currentPage === navigateToPage}
-      >
-        {navigateToPage === 1 ? 'First' : 'Last'}
-      </button>
-    )
+    <button
+      className={'disabled:text-[#9194A5] disabled:cursor-not-allowed'}
+      onClick={() => onPageChange(navigateToPage)}
+      disabled={currentPage === navigateToPage}
+    >
+      {navigateToPage === 1 ? 'First' : 'Last'}
+    </button>
   )
 }
 
