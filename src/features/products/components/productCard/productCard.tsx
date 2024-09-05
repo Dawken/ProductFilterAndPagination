@@ -1,7 +1,7 @@
 import RatingStars from '@src/components/ui/ratingStars/ratingStars'
 import { ProductProps } from '@src/types/productProps'
 import Image from 'next/image'
-import DiscountIcon from 'public/icons/discountIcon'
+import DiscountIcon from '@src/components/ui/icons/discountIcon'
 import React from 'react'
 
 const ProductCard = ({ product }: { product: ProductProps }) => {

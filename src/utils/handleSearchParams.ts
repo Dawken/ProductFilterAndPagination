@@ -4,7 +4,7 @@ const handleSearchParams = (
   searchParams: ReadonlyURLSearchParams,
   updates: Record<string, string | number | boolean | null>
 ) => {
-  const params = new URLSearchParams(searchParams.toString())
+  const params = new URLSearchParams(searchParams)
 
   Object.keys(updates).forEach((key) => {
     const value = updates[key]
@@ -15,7 +15,7 @@ const handleSearchParams = (
     }
   })
 
-  return `${window.location.pathname}?${params.toString()}`
+  return `${window.location.pathname}?${params}`
 }
 
 export default handleSearchParams

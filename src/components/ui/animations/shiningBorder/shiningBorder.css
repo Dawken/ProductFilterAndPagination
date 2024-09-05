@@ -22,7 +22,7 @@
 }
 
 .singlePlay svg {
-  animation: autoAnimation 5s linear var(--animation-delay) normal;
+  animation: autoAnimation 5s linear 2s normal;
 }
 .autoPlay svg {
   animation: autoAnimation 5s linear infinite normal;

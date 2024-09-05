@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ShoppingCartIcon from 'public/icons/shoppingCartIcon'
+import ShoppingCartIcon from '@src/components/ui/icons/shoppingCartIcon'
 import React from 'react'
 
 const Home = () => {
