@@ -1,18 +1,18 @@
-import React, { Dispatch, SetStateAction } from 'react'
+import React from 'react'
 import './checkBox.css'
 
 const CheckBox = ({
   isCheckBoxChecked,
-  setisCheckBoxChecked,
+  setIsCheckBoxChecked,
 }: {
   isCheckBoxChecked: boolean
-  setisCheckBoxChecked: Dispatch<SetStateAction<boolean>>
+  setIsCheckBoxChecked: (value: boolean) => void
 }) => {
   return (
     <input
       type='checkbox'
       checked={isCheckBoxChecked}
-      onChange={(event) => setisCheckBoxChecked(event.target.checked)}
+      onChange={(event) => setIsCheckBoxChecked(event.target.checked)}
     />
   )
 }

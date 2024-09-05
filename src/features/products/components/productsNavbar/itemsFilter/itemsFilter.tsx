@@ -21,25 +21,22 @@ const ItemsFilter = () => {
 
   return (
     <section className='w-full flex gap-4 max-md:justify-start md:justify-center max-md:flex-wrap-reverse items-center text-sm font-semibold'>
-      {/* Active checkbox */}
       <div className='w-fit flex gap-6 justify-end'>
         <div className='flex items-center gap-2'>
           <CheckBox
             isCheckBoxChecked={isActiveCheckBoxChecked}
-            setisCheckBoxChecked={setIsActiveCheckBoxChecked}
+            setIsCheckBoxChecked={setIsActiveCheckBoxChecked}
           />
           Active
         </div>
-        {/* Promo checkbox */}
         <div className='flex items-center gap-2'>
           <CheckBox
             isCheckBoxChecked={isPromoCheckBoxChecked}
-            setisCheckBoxChecked={setIsPromoCheckBoxChecked}
+            setIsCheckBoxChecked={setIsPromoCheckBoxChecked}
           />
           Promo
         </div>
       </div>
-      {/* Input */}
       <div className='w-full md:max-w-[392px] max-md:flex-1 h-[48px] min-w-[288px] text-black relative'>
         <div className='flex justify-center expandSearchBarAnimation h-full w-0  outline outline-[1px] outline-lightGrey rounded-lg '>
           <input

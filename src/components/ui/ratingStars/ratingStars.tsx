@@ -3,13 +3,13 @@ import Star from './star'
 
 const RatingStars = ({ rating }: { rating: string }) => {
   const starRating = Number(rating)
-  const totalStars = 5
+  const TOTAL_STARS = 5
   const filledStars = Math.floor(starRating / 2)
   const hasHalfStar = starRating % 2 !== 0
 
   return (
     <div className='flex gap-2'>
-      {[...Array(totalStars)].map((_, index) => (
+      {[...Array(TOTAL_STARS)].map((_, index) => (
         <div key={index} className='relative'>
           <Star filled={index < filledStars} />
           {index === filledStars && hasHalfStar && (
