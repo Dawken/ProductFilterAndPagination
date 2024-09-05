@@ -54,7 +54,7 @@ const ItemsFilter = () => {
           <button className='pr-4'>
             <SearchIcon width={26} height={26} />
           </button>
-          <ShiningBorder borderRadius={4} delay={2} autoPlay={isInputFocused} />
+          <ShiningBorder borderRadius={4} autoPlay={isInputFocused} />
         </div>
       </div>
     </section>
