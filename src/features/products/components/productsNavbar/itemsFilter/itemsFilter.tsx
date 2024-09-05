@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import SearchIcon from 'public/icons/searchIcon'
+import SearchIcon from '@src/components/ui/icons/searchIcon'
 import useItemsFilter from './useItemsFilter'
 import CheckBox from '@src/components/ui/checkBox/checkBox'
 import './itemsFilter.css'
