@@ -11,6 +11,10 @@ functionalities:
 
 Liveserver: https://product-filter-and-pagination-8x49.vercel.app
 
+### **Project architecture**
+
+bulletproof-react: https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md
+
 ### **Technologies**
 
 - Next: 14.0.4
