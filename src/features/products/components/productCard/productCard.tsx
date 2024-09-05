@@ -7,7 +7,7 @@ import React from 'react'
 const ProductCard = ({ product }: { product: ProductProps }) => {
   const { name, image, description, rating, promotion, active } = product
   return (
-    <div className='group flex flex-col size-full max-w-[288px] max-h-[350px] m-2 bg-white rounded-lg overflow-hidden shadow-md relative'>
+    <div className='group flex flex-col size-full max-w-[288px] h-[350px] m-2 bg-white rounded-lg overflow-hidden shadow-md relative'>
       {promotion && (
         <span
           className={`flex items-center gap-1 ${
@@ -25,14 +25,14 @@ const ProductCard = ({ product }: { product: ProductProps }) => {
         height={170}
         className={`aspect-[288/170] ${
           active ? 'grayscale-0' : 'grayscale'
-        } group-hover:scale-110 transition-all duration-300`}
+        } group-hover:scale-110 overflow-hidden transition-all duration-300 ease-in-out`}
       />
       <div className='flex flex-col justify-between flex-1 font-semibold text-sm'>
-        <div className='group-hover:-translate-y-11 -translate-y-2 rounded-t-xl transition-all duration-300 bg-white px-4 pt-3'>
+        <div className='group-hover:-translate-y-11 -translate-y-2 rounded-t-xl transition-all duration-300 ease-in-out bg-white px-4 pt-3'>
           <h2 className='text-lg text-[#1A1B1D]'>{name}</h2>
-          <span className='text-[#9194A5] line-clamp-3 group-hover:line-clamp-5 leading-4'>
+          <div className='text-[#9194A5] overflow-hidden text-ellipsis max-h-[50px] group-hover:max-h-[70px] group-hover:mt-4 leading-4 transition-all duration-300 ease-in-out'>
             {description}
-          </span>
+          </div>
         </div>
         <div className='flex w-full flex-col gap-4 px-4 absolute bottom-4'>
           <RatingStars rating={rating} />
