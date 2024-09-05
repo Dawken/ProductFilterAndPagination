@@ -1,0 +1,13 @@
+.expandSearchBarAnimation {
+  animation: expandSearchBarAnimation 700ms ease-in-out 1s forwards;
+  overflow: hidden;
+}
+
+@keyframes expandSearchBarAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

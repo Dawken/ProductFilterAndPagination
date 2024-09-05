@@ -1,0 +1,26 @@
+input[type='checkbox'] {
+  height: 24px;
+  width: 24px;
+  appearance: none;
+  border: 1px solid #e0e2ea;
+  border-radius: 6px;
+  position: relative;
+}
+
+input[type='checkbox']:checked::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  clip-path: polygon(
+    20% 54%,
+    30% 44%,
+    40% 54%,
+    68% 26%,
+    78% 36%,
+    40% 74%,
+    20% 54%
+  );
+  background-color: #0d8aff;
+  text-align: center;
+}
