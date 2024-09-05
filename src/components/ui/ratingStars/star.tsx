@@ -3,8 +3,8 @@ import React from 'react'
 const Star = ({ filled }: { filled: boolean }) => {
   return (
     <svg
-      width='16'
-      height='16'
+      width='12'
+      height='12'
       viewBox='0 0 24 24'
       fill={filled ? '#F9A52B' : 'transparent'}
       stroke={filled ? '#F9A52B' : '#B1B5C9'}
