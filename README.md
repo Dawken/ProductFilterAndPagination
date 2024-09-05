@@ -15,6 +15,15 @@ Liveserver: https://product-filter-and-pagination-8x49.vercel.app
 
 Inspirated by bulletproof-react: https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md
 
+### **Lighthouse**
+
+![image](https://github.com/user-attachments/assets/b5d28e75-70cc-4d39-ba95-ac7949ad8a5d)
+
+Accessibility didnt peak 100% because of figma design colors contrasts
+
+This page shows more realistic values because of vercel servers localization:
+https://pagespeed.web.dev/analysis/https-product-filter-and-pagination-8x49-vercel-app-products/yo3dxldi7q?form_factor=desktop
+
 ### **Technologies**
 
 - Next: 14.0.4
