@@ -5,7 +5,7 @@ import {
 import { Props } from './products.types'
 import filterProducts from '@src/utils/filterProducts'
 
-const useProducts = ({ searchParams }: Props) => {
+const products = ({ searchParams }: Props) => {
   const page = searchParams['page'] ?? '1'
   const searchTerm = searchParams['search'] ?? ''
   const isActive = Boolean(searchParams['active'])
@@ -14,7 +14,7 @@ const useProducts = ({ searchParams }: Props) => {
   const start = (Number(page) - 1) * productsPerPage
   const end = start + productsPerPage
 
-  const filteredProducts = filterProducts({
+  const searchedProducts = filterProducts({
     items: productsData,
     filterTerm: searchTerm,
     isActive,
@@ -25,10 +25,10 @@ const useProducts = ({ searchParams }: Props) => {
     return 0
   })
 
-  const products = filteredProducts.slice(start, end)
+  const filteredProducts = searchedProducts.slice(start, end)
   return {
-    products,
+    filteredProducts,
   }
 }
 
-export default useProducts
+export default products
