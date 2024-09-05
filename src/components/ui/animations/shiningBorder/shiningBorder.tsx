@@ -22,7 +22,7 @@ const ShiningBorder = ({
     <div
       className={`${
         autoPlay ? 'autoPlay' : 'singlePlay'
-      } absolute borderContainer`}
+      } absolute borderContainer pointer-events-none`}
       style={style}
     >
       <div className='borderLines'>

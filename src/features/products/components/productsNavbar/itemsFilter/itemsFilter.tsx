@@ -44,7 +44,7 @@ const ItemsFilter = () => {
         <div className='flex justify-center expandSearchBarAnimation h-full w-0  outline outline-[1px] outline-lightGrey rounded-lg '>
           <input
             ref={inputRef}
-            className='size-full outline-none pl-2 z-20'
+            className='size-full outline-none pl-2'
             placeholder='Search'
             value={searchTerm}
             onChange={(event) => setSearchTerm(event.target.value)}
